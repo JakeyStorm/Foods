@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="#f2f2f2"
+    tools:context=".activity.MenuActivity">
+
+
+    <ImageView
+        android:id="@+id/btnPerson"
+        android:layout_width="37sp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnAssestent"
+        app:layout_constraintEnd_toStartOf="@+id/btnAssestent"
+        app:layout_constraintTop_toTopOf="@+id/btnAssestent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/person" />
+
+    <Button
+        android:id="@+id/btnCart"
+        android:layout_width="45dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/cart_logo"
+        android:fontFamily="@font/cera_pro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Cpizza"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:background="@drawable/btn_menu_back_red"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/CPhish"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/CPhish">
+
+        <Button
+            android:id="@+id/btnPIzza"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/pizza_icone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_conteiner"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:visibility="visible"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CPhish">
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/cera_pro"
+        android:text="Меню"
+        android:textColor="#2a3747"
+        android:textSize="35sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/CPhish"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/btn_menu_back"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/CSoup"
+        app:layout_constraintStart_toEndOf="@+id/Cpizza"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btnFish"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/fish_icone2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/CSoup"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/btn_menu_back"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/CPhish"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/CPhish"
+        app:layout_constraintVertical_bias="0.0">
+
+        <Button
+            android:id="@+id/btnSoup"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/soup_icone2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:fontFamily="@font/cera_pro"
+        android:text="Пицца(10)"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_conteiner"
+        app:layout_constraintEnd_toEndOf="@+id/Cpizza"
+        app:layout_constraintStart_toStartOf="@+id/Cpizza"
+        app:layout_constraintTop_toBottomOf="@+id/Cpizza" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
+        android:fontFamily="@font/cera_pro"
+        android:text="Роллы(5)"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_conteiner"
+        app:layout_constraintEnd_toEndOf="@+id/CPhish"
+        app:layout_constraintHorizontal_bias="0.609"
+        app:layout_constraintStart_toStartOf="@+id/CPhish"
+        app:layout_constraintTop_toBottomOf="@+id/CPhish"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:fontFamily="@font/cera_pro"
+        android:text="Суппы(7)"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_conteiner"
+        app:layout_constraintEnd_toEndOf="@+id/CSoup"
+        app:layout_constraintHorizontal_bias="0.609"
+        app:layout_constraintStart_toStartOf="@+id/CSoup"
+        app:layout_constraintTop_toBottomOf="@+id/CSoup"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/btnScanner"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnCart"
+        app:layout_constraintEnd_toStartOf="@+id/btnCart"
+        app:layout_constraintTop_toTopOf="@+id/btnCart"
+        app:srcCompat="@drawable/qr_logo" />
+
+    <TextView
+        android:id="@+id/txtMesto"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/cera_pro_light"
+        android:text="0"
+        android:textColor="#2a3747"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnScanner"
+        app:layout_constraintEnd_toStartOf="@+id/btnScanner"
+        app:layout_constraintTop_toTopOf="@+id/btnScanner" />
+
+    <ImageView
+        android:id="@+id/btnAssestent"
+        android:layout_width="40sp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:onClick="onCLickMic"
+        app:layout_constraintBottom_toBottomOf="@+id/btnScanner"
+        app:layout_constraintEnd_toStartOf="@+id/txtMesto"
+        app:layout_constraintTop_toTopOf="@+id/btnScanner"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/micro" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

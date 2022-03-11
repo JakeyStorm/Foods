@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginEnd="16dp"
+    android:background="@drawable/food_back"
+    android:paddingBottom="6dp">
+
+    <ImageView
+        android:id="@+id/imagePreview"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:background="@drawable/image_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/googleg_disabled_color_18" />
+
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/cera_pro"
+        android:text="Название сериала"
+        android:textColor="#2a3747"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/imagePreview"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtDes"
+        android:layout_width="0sp"
+        android:layout_height="17sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="@font/cera_pro_light"
+        android:text="30 cм, традиционное тесто, 610г"
+        android:textColor="#2a3747"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/txt_name"
+        app:layout_constraintTop_toBottomOf="@+id/txtPrice" />
+
+    <TextView
+        android:id="@+id/txtPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/cera_pro"
+        android:text="200р"
+        android:textColor="#fa4041"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="@+id/txt_name"
+        app:layout_constraintTop_toBottomOf="@+id/txt_name" />
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="110sp"
+        android:layout_height="33sp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/bt_back"
+        android:fontFamily="@font/cera_pro"
+        android:linksClickable="true"
+        android:longClickable="true"
+        android:text="Добавить"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textColorLink="#8A8A8A"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/txtDes"
+        app:layout_constraintTop_toBottomOf="@+id/txtDes" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
